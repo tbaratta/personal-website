@@ -1,4 +1,4 @@
-# Personal Portfoloio Website
+# Personal Portfolio Website
 
 Click [here](https://tbaratta.github.io/personal-website/) to view the project website.
 
