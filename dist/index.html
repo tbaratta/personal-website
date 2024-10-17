@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Baratta - Portfolio</title> <!-- Include the external CSS file -->
+    <script src="https://kit.fontawesome.com/f71a36ceb4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap">
+
+  <link rel="stylesheet" crossorigin href="/assets/index-CwnmMmr2.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+
+    <!-- Include tsParticles via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <header>
+        <h1>Thomas Baratta</h1>
+        <p>Full Stack Developer</p>
+    </header>
+    <nav class="top-menu">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div>
+            <h2>About Me</h2>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Programming</span><br>C/C++, Python, JavaScript, HTML, CSS</li>
+                    <li><span>Full Stack Developer</span><br>Experience with both front and back end development</li>
+                </ul>
+            </div>
+        </div> <!-- Close the first "div" for the "About Me" section -->
+        
+        <!-- Open a new "div" for the second tab-contents -->
+        <div class="tab-contents" id="education">
+            <ul>
+                <li><span>Florida Gulf Coast University - Fort Myers, FL</span><br>Bachelors in Software Engineering (Graduation Date: 05/2026)</li>
+                <li><span>Harper College - Palatine, IL</span><br>Associates in Science</li>
+            </ul>
+        </div> <!-- Close the second "div" for the second tab-contents -->
+
+        <img src="/assets/IMG_1303-CCs0-Pi-.jpeg" alt="Personal">
+    </div> <!-- Close the "container" div -->
+     
+    <!-- Projects -->
+    
+    <div id="portfolio">
+    <div class="container">
+            <h1 class ="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/assets/Screenshot%202023-11-26%20at%201.50.27%20AM-CilPoRXr.png">
+                    <div class="layer">
+                        <h3>AI Article Summarizer</h3>
+                        <p>Web application that summarizes articles using artificial intelligence. Copy and paste the link to your article in the textbox and hit enter.</p>
+                        <a href="https://prismatic-pavlova-22cb2c.netlify.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/assets/Screenshot%202023-11-26%20at%201.50.49%20AM-BtZvDOSx.png">
+                    <div class="layer">
+                        <h3>Film Finder</h3>
+                        <p>Web application that displays a variety of movies based on the user's search. Enter a movie title in the search box.</p>
+                        <a href="https://tbaratta.github.io/film-finder-react/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/assets/1c8e0aa3-6b2d-4f01-a49e-15b556dc0882_03253_March-Blackjack-Blowout-Email_Image_1200x650_v1_210223-fbDPvT0L.avif">
+                    <div class="layer">
+                        <h3>Blackjack Simulator</h3>
+                        <p>C++ program that allows the user to play a simulated blackjack game against a dealer.</p>
+                        <a href="https://github.com/tbaratta/BlackJack_SFML"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left"></div>
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> tommybaratta7@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1-224-415-5843</p>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
