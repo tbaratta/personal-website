@@ -1,11 +1,30 @@
 body
 {
     font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
     background: linear-gradient(45deg, rgb(8, 179, 191), transparent);
+=======
+    //background: linear-gradient(45deg, rgb(8, 179, 191), transparent);
+    background: black;
+>>>>>>> 04488c1 (Added particle background)
     margin: 0;
     padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+#tsparticles {
+    position: fixed; /* Fixes the particles to the background */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    z-index: -1; /* Sends it behind all other content */
+    overflow: hidden; /* Hides overflow */
+}
+
+
+>>>>>>> 04488c1 (Added particle background)
 html
 {
     scroll-behavior: smooth;
@@ -231,4 +250,8 @@ img
 .work:hover .layer
 {
     height: 100%;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 04488c1 (Added particle background)

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "tsparticles": "^3.5.0",
+    "tsparticles-engine": "^2.12.0"
+  }
+}
