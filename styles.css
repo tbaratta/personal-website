@@ -218,7 +218,7 @@ img
 /* Media query for small screens */
 @media (max-width: 600px) {
     .layer {
-        transform: translateX(-20px); /* Shift the layer to the left by 50px */
+        transform: translateX(-20px); 
     }
 }
 
