@@ -1,12 +1,10 @@
 # Node.js dependencies
 node_modules/
-package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
 # Build output
 dist/
-.vite/
 
 # Cache and logs
 .cache/
@@ -31,5 +29,4 @@ Thumbs.db
 # GitHub Pages deployment cache
 node_modules/.cache/gh-pages/
 
-# Optional: If using TypeScript
 *.tsbuildinfo
