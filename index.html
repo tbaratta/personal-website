@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap">
     <link rel="icon" href="/assets/tb-C5gCq1Ic.jpg" type="image/x-icon">
 
-  <link rel="stylesheet" crossorigin href="/assets/index-TaDdemBt.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-BsdQ9jtj.css">
 </head>
 <body>
     <div id="tsparticles" ></div>
@@ -20,7 +20,7 @@
         <h1>Thomas Baratta</h1>
         <p>Full Stack Developer</p>
 
-    <div class="social-links">
+    <div class="social-links" id="header">
 	
         <a href="https://www.linkedin.com/in/thomas-baratta/" target="_blank" rel="noopener noreferrer">
 
@@ -58,8 +58,9 @@
             </div>
             <div class="tab-contents active-tab" id="skills">
                 <ul>
-                    <li><span>Programming</span><br>C/C++, Python, JavaScript, HTML, CSS</li>
-                    <li><span>Full Stack Developer</span><br>Experience with both front and back end development</li>
+                    <li><span>Specialization</span><br>Mobile and Web Development</li>
+                    <li><span>Programming Languages</span><br>JavaScript, Python, SQL, C++</li>
+                    <li><span>Frameworks</span><br>React.js, Node.js, Express.js, SupaBase, Cypress </li>
                 </ul>
                 
             </div>
@@ -85,7 +86,7 @@
                     <img src="/assets/Screenshot%202023-11-26%20at%201.50.27%20AM-CilPoRXr.png">
                     <div class="layer">
                         <h3>AI Article Summarizer</h3>
-                        <p>Web app to summarize your lengthy articles using AI</p>
+                        <p>Web App To Summarize Your Articles With AI</p>
                         <a href="https://prismatic-pavlova-22cb2c.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
@@ -117,7 +118,7 @@
                     <img src="/assets/research_paper-e3Ij9i8F.png">
                     <div class="layer">
                         <h3>Research Paper</h3>
-                        <p>Rseearch Paper Discussing Cybersecurity Training Methods</p>
+                        <p>Rseearch Paper On Cybersecurity Training Methods</p>
                         <a href="https://github.com/tbaratta/Research_Paper_Phish_Finders" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
@@ -125,7 +126,7 @@
                     <img src="/assets/Screenshot%202023-11-26%20at%201.50.49%20AM-BtZvDOSx.png">
                     <div class="layer">
                         <h3>Film Finder</h3>
-                        <p>Web App To Search For Your Favorite Movies</p>
+                        <p>Web App To Search For Movies</p>
                         <a href="https://tbaratta.github.io/film-finder-react/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
@@ -199,34 +200,27 @@
     const workItems = document.querySelectorAll('.work');
     
     workItems.forEach(work => {
-        work.addEventListener('click', function(e) {
-            // Only handle clicks on mobile
+        work.addEventListener('touchstart', function(e) {
+            // Only handle touches on mobile
             if (window.innerWidth <= 768) {
-                // If clicking the link inside the layer, don't prevent default
+                // If touching the link inside the layer, don't prevent default
                 if (e.target.tagName === 'A' || e.target.tagName === 'I') {
                     return;
                 }
                 
-                // Remove active class from all other works
-                workItems.forEach(w => {
-                    if (w !== work) w.classList.remove('active');
-                });
+                e.preventDefault(); // Prevent any default touch behavior
                 
-                // Toggle active class on clicked work
-                work.classList.toggle('active');
-                
-                // Prevent the click from triggering parent elements
-                e.stopPropagation();
+                // Toggle the overlay directly without checking other items
+                const layer = work.querySelector('.layer');
+                if (layer) {
+                    layer.style.opacity = layer.style.opacity === '1' ? '0' : '1';
+                    layer.style.transform = layer.style.opacity === '1' ? 'translateY(0)' : 'translateY(100%)';
+                }
             }
-        });
+        }, { passive: false });
     });
 
-    // Close project overlay when clicking outside
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && !e.target.closest('.work')) {
-            workItems.forEach(work => work.classList.remove('active'));
-        }
-    });
+    // Remove the document click listener since we're handling everything in the touchstart event
 </script>
   
 </body>
