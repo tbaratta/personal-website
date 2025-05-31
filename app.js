@@ -20,7 +20,7 @@ tsParticles.load("tsparticles", {
             value: 0.80, // Adjust the transparency of particles
         },
         color: {
-            value: "#07cadb", // Particle color
+            value: "#07cadb", // Particle color // #07cadb
         },
     },
     interactivity: {

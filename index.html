@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <div id="tsparticles"></div>
+    <div id="tsparticles" ></div>
 
     <!-- Include tsParticles via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
@@ -22,28 +22,33 @@
 
     <div class="social-links">
 	
-        <a href="https://www.linkedin.com/in/thomas-baratta-228244290/">
+        <a href="https://www.linkedin.com/in/thomas-baratta/" target="_blank" rel="noopener noreferrer">
 
-		<div id="linkedin" class="social-btn flex-center">
+		<div id="linkedin" class="social-btn flex-center" >
 			<svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg>
             </a>
         </div>
 
 		<div id="github" class="social-btn flex-center">
-            <a href="https://github.com/tbaratta">
+            <a href="https://github.com/tbaratta" target="_blank" rel="noopener noreferrer">
 			<svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
         </a>
         </div>
     </div>
         
     </header>
+
     <nav class="top-menu">
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#header">Home</a></li>
             <li><a href="#portfolio">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
     <div class="container">
         <div>
             <h2>About Me</h2>
@@ -81,47 +86,47 @@
                     <div class="layer">
                         <h3>AI Article Summarizer</h3>
                         <p>Web app to summarize your lengthy articles using AI</p>
-                        <a href="https://prismatic-pavlova-22cb2c.netlify.app/"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
+                        <a href="https://prismatic-pavlova-22cb2c.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="images/eagle_hacks.png">
                     <div class="layer">
                         <h3>Eagle Hacks 2025 Website</h3>
-                        <p>Full-stack web app for Eagle Hacks: FGCU's annual hackathon</p>
-                        <a href="https://www.youtube.com/watch?v=gMD5NfMpT2s"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
+                        <p>Full-Stack Web App For Eagle Hacks: FGCU's Annual Hackathon</p>
+                        <a href="https://eagle-hacks.onrender.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/pathfinderv2.png">
+                    <img src="images/ neo-eden.PNG">
                     <div class="layer">
-                        <h3>PathFinder</h3>
-                        <p>Visualize Dijkstra's algorithm with PathFinder</p>
-                        <a href="https://www.youtube.com/watch?v=cY4swDDYqS0"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
+                        <h3>Neo Eden</h3>
+                        <p>Post-Apocalyptic Survival Tool</p>
+                        <a href="https://www.youtube.com/shorts/QT07gVr8Kxs" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="images/wealth_wise_ai.png">
                     <div class="layer">
                         <h3>Wealth Wise AI</h3>
-                        <p>AI-powered mobile application offering personal financial advisory services</p>
-                        <a href="https://github.com/tbaratta/WealthWise_AI"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
+                        <p>Personalized AI Financial Advisor</p>
+                        <a href="https://github.com/tbaratta/WealthWise_AI" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="images/research_paper.png">
                     <div class="layer">
                         <h3>Research Paper</h3>
-                        <p>10 page research paper discussing cybersecurity training methods with PhishFinders</p>
-                        <a href="https://github.com/tbaratta/Research_Paper_Phish_Finders"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
+                        <p>Rseearch Paper Discussing Cybersecurity Training Methods</p>
+                        <a href="https://github.com/tbaratta/Research_Paper_Phish_Finders" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="images/Screenshot 2023-11-26 at 1.50.49 AM.png">
                     <div class="layer">
                         <h3>Film Finder</h3>
-                        <p>Web app to search for your favorite movies</p>
-                        <a href="https://tbaratta.github.io/film-finder-react/"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
+                        <p>Web App To Search For Your Favorite Movies</p>
+                        <a href="https://tbaratta.github.io/film-finder-react/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i></a>
                     </div>
                 </div>
             </div>
@@ -159,5 +164,71 @@
     }
 
 </script>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+  
+    // Toggle menu when clicking the hamburger icon
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+        }
+    });
+
+    // Prevent menu from closing when clicking inside it
+    navLinks.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+</script>
+
+<script>
+    // Handle project clicks on mobile
+    const workItems = document.querySelectorAll('.work');
+    
+    workItems.forEach(work => {
+        work.addEventListener('click', function(e) {
+            // Only handle clicks on mobile
+            if (window.innerWidth <= 768) {
+                // If clicking the link inside the layer, don't prevent default
+                if (e.target.tagName === 'A' || e.target.tagName === 'I') {
+                    return;
+                }
+                
+                // Remove active class from all other works
+                workItems.forEach(w => {
+                    if (w !== work) w.classList.remove('active');
+                });
+                
+                // Toggle active class on clicked work
+                work.classList.toggle('active');
+                
+                // Prevent the click from triggering parent elements
+                e.stopPropagation();
+            }
+        });
+    });
+
+    // Close project overlay when clicking outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && !e.target.closest('.work')) {
+            workItems.forEach(work => work.classList.remove('active'));
+        }
+    });
+</script>
+  
 </body>
 </html>
