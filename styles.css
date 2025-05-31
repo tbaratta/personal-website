@@ -202,23 +202,29 @@ img
     background: linear-gradient(rgba(0,0,0,0.6), rgb(66,245,245));
     border-radius: 10px;
     position: absolute;
-    left: 0;
+    left: 15%;  /* Shifted from 15% to 10% to move content more to the left */
     bottom: 0;
-    overflow: hidden;
+    overflow-y: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     transition: all 0.3s ease;
     opacity: 0;
 }
 
+.layer h3, 
+.layer p {
+    width: 100%;
+    text-align: center;
+}
+
 .work:hover .layer
 {
-    height: 90%;
+    height: 100%;
     opacity: 1;
 }
 
@@ -242,6 +248,12 @@ img
     height: 60px;
     border-radius: 50%;
     text-align: center;
+}
+
+.layer p {
+    width: 100%;  /* Ensure full width for proper centering */
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .work:hover img
@@ -332,15 +344,39 @@ img
 
     .layer {
         width: 100%;
+        left: -20px;  /* Shift the entire layer slightly to the left */
         height: 100%;
         opacity: 0;
         transform: translateY(100%);
-        padding: 20px;
+        padding: 20px 40px;  /* Increased right padding to balance the left shift */
+        overflow-y: auto;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .layer h3, 
+    .layer p {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
     }
 
     .work.active .layer {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    .work {
+        touch-action: manipulation;
+    }
+
+    .work:active .layer,
+    .work:hover .layer {
         opacity: 1;
         transform: translateY(0);
+        height: 100%;
     }
 
     .social-links {
@@ -361,9 +397,15 @@ img
     }
 
     .container {
-        width: 90%;
-        margin: 20px auto;
+        width: 85%;
+        margin: 20px 5% 20px auto;
         padding: 20px;
+    }
+
+    #portfolio .container,
+    #contact .container {
+        width: 80%;
+        margin: 20px 5% 20px auto;
     }
 
     .container h1, 
