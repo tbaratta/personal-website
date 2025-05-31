@@ -1,7 +1,7 @@
 body
 {
     font-family: 'Poppins', sans-serif;
-    //background: linear-gradient(45deg, rgb(8, 179, 191), transparent);
+    /* background: linear-gradient(45deg, rgb(8, 179, 191), transparent); */
     background: black;
     margin: 0;
     padding: 0;
@@ -41,6 +41,7 @@ header h1
     padding: 20px;
     background-color: #000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 img
 {
@@ -140,7 +141,7 @@ img
 
 .tab-contents ul li span
 {
-    color: rgb(10,145,145); // rgb(10,145,145)
+    color: rgb(10,145,145); /* rgb(10,145,145) */
     font-size: 14px;
 }
 
@@ -232,7 +233,7 @@ img
 .layer a
 {
     margin-top: 20px;
-    color: rgb(66,245,245); // rgb(66,245,245)
+    color: rgb(66,245,245); /* rgb(66,245,245) */
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -360,21 +361,37 @@ img
     }
 
     .container {
-        padding: 10px;
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
     }
 
-    img {
-        height: auto;
-        max-height: 250px;
+    .container h1, 
+    .container h2, 
+    .container .sub-title {
+        text-align: center;
+        margin-bottom: 25px;
     }
 
     .container img {
         display: block;
-        margin: 20px auto;
-        max-width: 100%;
+        margin: 30px auto;
+        max-width: 90%;
         height: auto;
         max-height: 300px;
         object-fit: contain;
+    }
+
+    #portfolio {
+        padding: 30px 0;
+    }
+
+    #contact {
+        padding: 30px 0;
+    }
+
+    .contact-left {
+        text-align: center;
     }
 }
 
