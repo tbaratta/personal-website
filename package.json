@@ -5,6 +5,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@tsparticles/engine": "^3.9.1",
     "tsparticles": "^3.5.0",
     "tsparticles-engine": "^2.12.0"
   },
