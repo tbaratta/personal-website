@@ -1,5 +1,5 @@
 /* =========================================
-   Thomas Baratta — Cleaned Styles
+   Thomas Baratta â€” Cleaned Styles
    - Polished home (glass)
    - Keeps particles + mobile menu
    - Leaves Hackathon styles scoped at end
@@ -350,7 +350,7 @@ h1, h2, h3, p, li, span { color: #fff; }
 }
 
 /* =========================================
-   HACKATHON PAGE (hackathon.html) — Minimal
+   HACKATHON PAGE (hackathon.html) â€” Minimal
    (Kept so hackathon page continues to work)
 ========================================= */
 body.hackathon {
@@ -511,7 +511,7 @@ body.hackathon {
   }
   
   /* Base galaxy gradient (same family as .top-menu.glass-nav) */
-  @media (prefers-reduced-transparency: no-preference) {
+  
     .glass-card,
     .hero-glass {
       position: relative;
@@ -525,7 +525,7 @@ body.hackathon {
       -webkit-backdrop-filter: saturate(140%) blur(12px);
       box-shadow: var(--galaxy-shadow), inset 0 1px 0 rgba(255,255,255,0.06);
       border-radius: 20px;
-    }
+    
   
     /* Soft sparkle highlight */
     .glass-card::after,
@@ -696,7 +696,7 @@ body.hackathon {
 
   /* Make the mountain photo slightly taller on desktop */
 .about-photo--tall {
-    max-height: 420px;      /* was ~320–360 before; tweak to taste */
+    max-height: 420px;      /* was ~320â€“360 before; tweak to taste */
     object-fit: cover;      /* keep edges clean */
     object-position: 50% 35%; /* nudge framing if needed (x y) */
   }
