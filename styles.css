@@ -558,14 +558,46 @@ body.hackathon {
   /* Optional: match the mobile dropdown with the same palette */
   @media (max-width: 768px) {
     .top-menu.glass-nav .nav-links {
+      /* anchor under the top menu, full width with max constraint */
+      position: fixed;
+      top: 62px; left: 50%;
+      transform: translateX(-50%) translateY(-6px) scale(.995);
+      width: calc(100% - 32px);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      /* opaque, readable background using galaxy palette */
       background:
-        radial-gradient(800px 500px at 12% -10%, var(--galaxy-glow-1), transparent 60%),
-        radial-gradient(700px 450px at 110% 8%, var(--galaxy-glow-2), transparent 55%),
-        linear-gradient(180deg, var(--galaxy-base-1), var(--galaxy-base-2));
-      border: 1px solid var(--galaxy-border);
-      backdrop-filter: saturate(140%) blur(12px);
-      -webkit-backdrop-filter: saturate(140%) blur(12px);
+        linear-gradient(180deg, rgba(8,10,16,0.98), rgba(12,14,22,0.98));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.55);
+
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+      transition: opacity .22s ease, transform .18s ease, visibility .18s;
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      backdrop-filter: saturate(140%) blur(10px);
     }
+    .top-menu.glass-nav .nav-links.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+    .top-menu.glass-nav .nav-links a {
+      padding: 14px 18px;
+      font-size: 16px;
+      color: #eef6ff;
+      border-radius: 8px;
+      display: block;
+      text-decoration: none;
+    }
+    .top-menu.glass-nav .nav-links a:hover { background: rgba(66,245,245,0.08); color: #fff; }
   }
   
   /* Sub-title chip border tint to match */
