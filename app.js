@@ -1,5 +1,6 @@
 // app.js
 // example
+// change 2
 
 tsParticles.load("tsparticles", {
     fullScreen: { enable: false },      // you already size/position #tsparticles in CSS
