@@ -1,4 +1,6 @@
 // app.js
+// example
+
 tsParticles.load("tsparticles", {
     fullScreen: { enable: false },      // you already size/position #tsparticles in CSS
     detectRetina: true,
